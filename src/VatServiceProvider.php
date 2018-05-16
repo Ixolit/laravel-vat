@@ -31,7 +31,7 @@ class VatServiceProvider extends ServiceProvider
             try {
                 $valid = ValidatorFacade::validate( $value );
             }  catch( ViesException $e ) {
-                return true;
+                return false;
             }
 
             return $valid;
